@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <title>Happy Birthday ThuyDuong</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Animation Elements -->
+    <div class="background-animation" id="bgAnimation"></div>
+    
+    <!-- Stars background -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Slide Container -->
+    <div class="slide-container" id="slideContainer">
+        
+        <!-- Slide 1: Login Screen -->
+        <div class="slide active" id="slide1">
+            <div class="slide-content">
+                <div class="login-card">
+                    <h1>💖 Chào bé yêu! 💖</h1>
+                    <p style="margin-bottom: 30px; font-size: 1.1rem; color: #666;">
+                        Hãy nhập một ngày đặc biệt của chúng ta để mở tấm thiệp sinh nhật này nhé! 
+                    </p>
+                    <input type="date" class="date-input" id="passwordDate" placeholder="DD/MM/YYYY">
+                    <br>
+                    <button class="login-btn" onclick="checkPassword()">💕 Mở thiệp! 💕</button>
+                    <div class="error-message" id="errorMessage"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Welcome & Love Counter -->
+        <div class="slide" id="slide2">
+            <div class="slide-content">
+                <h1 class="slide-title">Chúc Mừng Sinh Nhật Bé Yêu!</h1>
+                
+                <div class="love-counter">
+                    <h2>Chúng ta đã bên nhau được:</h2>
+                    <div class="counter-number" id="loveCounter">0</div>
+                    <p>ngày ròi đó bé!</p>
+                </div>
+                
+                <div class="slide-hint">
+                    <p>👆 Vuốt lên hoặc chạm để tiếp tục</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Birthday Wishes -->
+        <div class="slide" id="slide3">
+            <div class="slide-content">
+                <div class="wishes-section">
+                    <h2>Lời Chúc Từ Trái Tim</h2>
+                    <div class="wishes-text">
+                        <p class="fade-in-text">Bé yêu của anh ơi, hôm nay là ngày thiên thần nhỏ của anh chào đời!👼</p>
+                        <p class="fade-in-text">682 ngày qua, em đã làm cho trái tim anh rộn ràng mỗi khi thức dậy. Em như ánh nắng đầu tiên mỗi sáng, như làn gió mát lành xoa dịu tâm hồn anh. 
+                                                Cảm ơn bé đã đến và biến cuộc đời anh thành một câu chuyện cổ tích đẹp nhất! 💕</p>
+                        <p class="fade-in-text">Anh chúc bé yêu sinh nhật thật nhiều niềm vui, như những bông hoa luôn nở rộ trong nắng mai, như những vì sao lấp lánh trong đêm tối.⭐</p>
+                        <p class="fade-in-text">Happy Birthday to my everything, my sunshine, my love!🎂</p>
+                    </div>
+                </div>           
+                <div class="slide-hint">
+                    <p>👆 Vuốt lên để xem câu chuyện tình yêu</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Timeline Introduction -->
+        <div class="slide" id="slide4">
+            <div class="slide-content">
+                <h2 class="timeline-intro-title">📚 Câu Chuyện Tình Yêu Của Chúng Ta</h2>
+                <div class="timeline-intro">
+                    <p>Hãy cùng anh lật lại những trang đẹp nhất trong cuốn sách tình yêu của chúng ta...</p>
+                    <div class="story-book">📖</div>
+                </div>
+                
+                <div class="slide-hint">
+                    <p>👆 Bắt đầu hành trình kỷ niệm</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Timeline Stage 1 -->
+        <div class="slide" id="slide5">
+            <div class="slide-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">🌟 Khởi đầu</div>
+                    <div class="timeline-title">Những ngày đầu tiên chúng ta</div>
+                    <div class="timeline-description">
+                        Em còn nhớ ngày đầu chúng ta gặp nhau chứ, đây là lúc mọi thứ bắt đầu... Khoảnh khắc định mệnh khi đôi mắt chúng ta gặp nhau lần đầu tiên. 
+                        Có lẽ đó là một ngày bình thường với mọi người, nhưng với anh, đó là ngày quan trọng nhất trong đời.
+                    </div>
+                    <div class="photo-gallery">
+                        <div class="photo-item">
+                            <img src="imgs/part1/img11.jpg" alt=""></div>
+                        <div class="photo-item">
+                            <img src="imgs/part1/img12.png" alt=""></div>
+                        <div class="photo-item">
+                            <img src="imgs/part1/img14.jpg" alt=""></div>
+                        <div class="photo-item">
+                            <img src="imgs/part1/img15.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Timeline Stage 2 -->
+        <div class="slide" id="slide6">
+            <div class="slide-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">💖 Tìm hiểu</div>
+                    <div class="timeline-title">Những ngày tìm hiểu nhau</div>
+                    <div class="timeline-description">
+                        Chúng ta bắt đầu nhắn tin, gọi điện, và dành thời gian để hiểu nhau hơn. 
+                        Mỗi cuộc trò chuyện đều khiến anh muốn biết thêm về em, về những ước mơ, sở thích của em.
+                    </div>
+                    <div class="photo-gallery">
+                        <div class="photo-item">
+                            <img src="imgs/part2/img21.jpg" alt=""></div>
+                        <div class="photo-item">
+                            <img src="imgs/part2/img22.jpg" alt=""></div>
+                        <div class="photo-item">
+                            <img src="imgs/part2/img23.png" alt=""></div>
+                        <div class="photo-item">
+                            <img src="imgs/part2/img24.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Timeline Stage 3 -->
+        <div class="slide" id="slide7">
+            <div class="slide-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">💕 Yêu nhau</div>
+                    <div class="timeline-title">Ngày chúng ta chính thức yêu nhau</div>
+                    <div class="timeline-description">
+                        Ngày đặc biệt nhất! Ngày anh và em quyết định bên nhau, cùng nhau viết nên câu chuyện tình yêu đẹp nhất. 
+                        Từ ngày đó, mỗi ngày trôi qua đều là một món quà tuyệt vời.
+                    </div>
+                    <div class="photo-gallery">
+                        <div class="photo-item">
+                            <img src="imgs/part3/img33.jpg" alt=""></div>
+                        <div class="photo-item">
+                            <img src="imgs/part3/img32.jpg" alt=""></div>
+                        <div class="photo-item">
+                            <img src="imgs/part3/img31.jpg" alt=""></div>
+                        <div class="photo-item">
+                            <img src="imgs/part3/img34.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Timeline Stage 4 -->
+        <div class="slide" id="slide8">
+            <div class="slide-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">🌈 Những kỷ niệm đẹp</div>
+                    <div class="timeline-title">Những chuyến đi và kỷ niệm</div>
+                    <div class="timeline-description">
+                        Chúng ta cùng nhau đi chơi, đi du lịch khám phá những địa điểm mới, tạo ra vô số kỷ niệm đẹp. 
+                        Mỗi chuyến đi đều là một chương mới trong câu chuyện tình yêu của chúng ta.
+                    </div>
+                    <div class="photo-gallery">
+                        <div class="photo-item">
+                            <img src="imgs/part4/img41.jpg" alt=""></div>
+                        <div class="photo-item">
+                            <img src="imgs/part4/img42.jpg" alt=""></div>
+                        <div class="photo-item">
+                            <img src="imgs/part4/img43.jpg" alt=""></div>
+                        <div class="photo-item">
+                            <img src="imgs/part4/img44.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Timeline Stage 5 & Final -->
+        <div class="slide" id="slide9">
+            <div class="slide-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">🎂 Và hôm nay</div>
+                    <div class="timeline-title">Sinh nhật bé yêu!</div>
+                    <div class="timeline-description">
+                        Và hôm nay, ngày sinh nhật của bé, một ngày đặc biệt anh muốn gửi tặng bé tấm thiệp này 
+                        như một món quà nhỏ để ghi lại những kỷ niệm đẹp của chúng ta. Sau một thời gian suy 
+                        nghĩ anh quyết định sẽ cho bé chọn một trong hai món quà dưới đây hihi. 
+                        Chúc bé sinh nhật vui vẻ nhé! 🎉
+                    </div>
+                    <div class="photo-gallery1">
+                        <div class="photo-item1 gift-box2" id="giftBox1" onclick="openGift(1)">
+                            <div class="gift-text">🎂 Click để mở quà!</div>
+                            <div class="gift-content">
+                                <div style="font-size: 1rem;">Thanh toán 5 đơm hàng shopee được thêm gần nhất</div>
+                            </div>
+                        </div>
+                        <div class="photo-item1 gift-box2" id="giftBox2" onclick="openGift(2)">
+                            <div class="gift-text">🎁 Click để mở quà!</div>
+                            <div class="gift-content">
+                                <div style="font-size: 1rem;">Số ngày yêu x 1000 VNĐ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="final-message">
+                    <h2>💕 Anh yêu bé 💕</h2>
+                    <p>Happy Birthday, My Love! 🎂✨</p>
+                    <button class="restart-btn" onclick="restartSlideshow()">🔄 Xem lại thiệp</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="slide-navigation">
+        <div class="nav-dots" id="navDots"></div>
+        <div class="nav-arrows">
+            <button class="nav-arrow prev" id="prevBtn" onclick="previousSlide()">‹</button>
+            <button class="nav-arrow next" id="nextBtn" onclick="nextSlide()">›</button>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
